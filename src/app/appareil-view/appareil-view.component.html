@@ -1,0 +1,11 @@
+ <div class="col-lg-12">
+   <h2>Mes appareils</h2>
+
+   <ul class="list-group mb-2">
+     <app-appareil *ngFor="let matos of matos  ; let i = index " [indexOfMatos]="i" [matoStatus]="matos.status"
+       [matosNom]="matos.name"></app-appareil>
+   </ul>
+   <button class="btn btn-success w-25" [disabled]="isAuth" (click)="Apreto()">Allumer Tout </button>
+   <button class="btn btn-dark w-25" [disabled]="isAuth" (click)="Vonoy()">Eteindre tout</button>
+
+ </div>

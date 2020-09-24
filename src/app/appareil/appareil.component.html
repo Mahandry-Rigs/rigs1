@@ -1,0 +1,13 @@
+<li [ngClass]="{ 'list-group-item': true,
+                        'list-group-item-warning': matoStatus === 'mandeha',
+                        'list-group-item-primary': matoStatus === 'maty' }">
+
+  <!-- <div style="width: 20px; height: 20px" class="bg-danger" *ngIf="matoStatus === 'mandeha'"></div>
+  <div style="width: 20px; height: 20px" class="bg-warning" *ngIf="matoStatus === 'maty'"></div> -->
+  <h4 [ngStyle]="{color:getColor()}"> Ny Appareil: {{ matosNom }} dia {{ getStatus() }}</h4>
+
+  <button class="btn btn-warning mr-2 " [disabled]="matoStatus === 'mandeha'" (click)="MandeZa()">Apreto</button>
+  <button class="btn btn-dark " [disabled]="matoStatus === 'maty'" (click)="matyZa()">Vonoy</button>
+
+  <!-- <input type="text" class="form-control" [(ngModel)]="matosNom"> -->
+</li>
